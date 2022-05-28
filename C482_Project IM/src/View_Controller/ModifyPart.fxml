@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="541.0" prefWidth="527.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View_Controller.ModifyPartController">
+   <children>
+
+      <Label layoutX="32.0" layoutY="45.0" text="Modify Part">
+         <font>
+            <Font name="Arial Black" size="18.0" />
+         </font>
+      </Label>
+      <RadioButton fx:id="inHouseRadio" layoutX="154.0" layoutY="52.0" mnemonicParsing="false" onAction="#selectInHouse" prefHeight="19.0" prefWidth="89.0" text="In-House">
+         <toggleGroup>
+            <ToggleGroup fx:id="switchingIDbtn" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="outSourcedRadio" layoutX="327.0" layoutY="50.0" mnemonicParsing="false" onAction="#selectOutSourced" onMouseClicked="#selectOutSourced" text="OutSourced" toggleGroup="$switchingIDbtn" />
+      <TextField fx:id="id" layoutX="159.0" layoutY="137.0" prefHeight="27.0" prefWidth="132.0" promptText="auto generated" />
+      <TextField fx:id="name" layoutX="159.0" layoutY="173.0" prefHeight="27.0" prefWidth="132.0" />
+      <TextField fx:id="stock" layoutX="159.0" layoutY="213.0" prefHeight="27.0" prefWidth="132.0" />
+      <TextField fx:id="price" layoutX="159.0" layoutY="251.0" prefHeight="27.0" prefWidth="132.0" />
+      <TextField fx:id="max" layoutX="159.0" layoutY="289.0" prefHeight="27.0" prefWidth="132.0" />
+      <TextField fx:id="switchingID" layoutX="159.0" layoutY="325.0" prefHeight="27.0" prefWidth="132.0" />
+      <Label layoutX="53.0" layoutY="142.0" text="ID" />
+      <Label layoutX="54.0" layoutY="178.0" text="Name" />
+      <Label layoutX="51.0" layoutY="218.0" text="Inv" />
+      <Label layoutX="50.0" layoutY="256.0" text="Price/Cost" />
+      <Label layoutX="53.0" layoutY="294.0" text="Max" />
+      <Label layoutX="317.0" layoutY="294.0" text="Min" />
+      <TextField fx:id="min" layoutX="358.0" layoutY="289.0" prefHeight="27.0" prefWidth="132.0" />
+      <Button fx:id="savePart" layoutX="300.0" layoutY="365.0" mnemonicParsing="false" onAction="#savePart" text="Save" />
+      <Button fx:id="cancelPart" layoutX="372.0" layoutY="365.0" mnemonicParsing="false" onAction="#cancelPart" text="Cancel" />
+      <Label id="partSwappingLabel" fx:id="partSwappingLabel" layoutX="48.0" layoutY="330.0" text="Machine ID" />
+   </children>
+</AnchorPane>
